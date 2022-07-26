@@ -12,9 +12,8 @@ public sealed class ApiKeyCredentialsProviderTests : IDisposable
 
     public ApiKeyCredentialsProviderTests()
     {
-        var options = new UbiquityApiConfiguration();
-        options.ReturnsForAnyArgs(new UbiquityApiConfiguration {ApiKey = "pubKey"});
-        _provider = new ApiKeyCredentialsProvider(options);
+        var configuration = new UbiquityApiConfiguration{ApiKey = "pubKey"};
+        _provider = new ApiKeyCredentialsProvider(configuration);
     }
 
     [Fact]

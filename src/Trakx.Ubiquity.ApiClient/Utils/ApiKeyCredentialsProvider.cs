@@ -7,7 +7,7 @@ namespace Trakx.Ubiquity.ApiClient.Utils;
 
 public interface IUbiquityCredentialsProvider : ICredentialsProvider { };
 
-public class ApiKeyCredentialsProvider : IUbiquityCredentialsProvider, IDisposable
+public sealed class ApiKeyCredentialsProvider : IUbiquityCredentialsProvider, IDisposable
 {
     internal const string JwtScheme = "Bearer";
 
@@ -43,7 +43,7 @@ public class ApiKeyCredentialsProvider : IUbiquityCredentialsProvider, IDisposab
 
     #region IDisposable
 
-    protected virtual void Dispose(bool disposing)
+    private void Dispose(bool disposing)
     {
         if (!disposing) return;
         _tokenSource.Cancel();

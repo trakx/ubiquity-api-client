@@ -22,8 +22,7 @@ public static partial class AddUbiquityClientExtension
     public static IServiceCollection AddUbiquityClient(
         this IServiceCollection services, UbiquityApiConfiguration apiConfiguration)
     {
-        var options = Options.Create(apiConfiguration);
-        services.AddSingleton(options);
+        services.AddSingleton(apiConfiguration);
 
         AddCommonDependencies(services);
 

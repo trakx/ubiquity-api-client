@@ -7,18 +7,18 @@ namespace Trakx.Ubiquity.ApiClient;
 
 internal class ClientConfigurator
 {
-    private readonly IServiceProvider _provider;
+    private readonly IUbiquityCredentialsProvider _credentialsProvider;
 
-    public ClientConfigurator(IServiceProvider provider)
+    public ClientConfigurator(UbiquityApiConfiguration configuration, IUbiquityCredentialsProvider credentialsProvider)
     {
-        _provider = provider;
-        Configuration = provider.GetService<IOptions<UbiquityApiConfiguration>>()!.Value;
+        _credentialsProvider = credentialsProvider;
+        Configuration = configuration;
     }
 
     public UbiquityApiConfiguration Configuration { get; }
 
     public ICredentialsProvider GetCredentialsProvider()
     {
-        return _provider.GetRequiredService<IUbiquityCredentialsProvider>();
+        return _credentialsProvider;
     }
 }
