@@ -1,0 +1,25 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ output extension=".cs" #>
+#pragma warning disable S1172, IDE0060 // Unused method parameters should be removed
+
+namespace Trakx.Ubiquity.ApiClient
+{
+<#
+var clientNames = new [] { "Accounts", "Block_Identifiers", "Blocks", "NFT", "Protocols", "Sync", "Transactions" };
+
+foreach(var name in clientNames)
+{
+#>
+    internal partial class <#= name #>Client
+    {
+        partial void PrepareRequest(System.Net.Http.HttpClient client, System.Net.Http.HttpRequestMessage request, string url)
+        {
+            CredentialProvider.AddCredentials(request);
+        }
+    }
+<#
+}
+#>
+
+}
