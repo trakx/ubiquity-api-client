@@ -18,15 +18,13 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="DotNetEnv" Version="2.5.0" />
-    <PackageReference Include="Trakx.Utils.Testing" Version="0.6.12" />
-    <PackageReference Include="FluentAssertions" Version="6.11.0" />
+    <PackageReference Include="Trakx.Common.Testing.Documentation" Version="0.2.5" />
     <PackageReference Include="Flurl" Version="3.0.7" />
     <PackageReference Include="Flurl.Http" Version="3.2.4" />
     <PackageReference Include="GitHubActionsTestLogger" Version="2.3.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
     <PackageReference Include="Serilog.Sinks.XUnit" Version="3.0.5" />
     <PackageReference Include="NSubstitute" Version="5.0.0" />

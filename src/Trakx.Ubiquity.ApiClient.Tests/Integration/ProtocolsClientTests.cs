@@ -19,7 +19,7 @@ public class ProtocolsClientTests : UbiquityClientTestsBase
     public async Task GetProtocolsAsync_should_work()
     {
         var response = await _client.GetProtocolsAsync();
-        var protocolsOverview = response.Result;
+        var protocolsOverview = response.Content;
         protocolsOverview.Should().NotBeNull();
 
         Logger.Information("retrieve protocols {protocols}", protocolsOverview);
@@ -29,7 +29,7 @@ public class ProtocolsClientTests : UbiquityClientTestsBase
     public async Task GetProtocolsListAsync_should_work()
     {
         var list = await _client.GetProtocolsListAsync();
-        var protocolsOverview = list.Result;
+        var protocolsOverview = list.Content;
         protocolsOverview.Should().NotBeNull();
 
         Logger.Information("retrieve protocols list {protocolsList}", protocolsOverview.Protocols);
