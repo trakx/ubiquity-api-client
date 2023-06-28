@@ -1,4 +1,4 @@
-﻿using Trakx.Utils.Apis;
+﻿using Trakx.Common.ApiClient;
 
 namespace Trakx.Ubiquity.ApiClient;
 

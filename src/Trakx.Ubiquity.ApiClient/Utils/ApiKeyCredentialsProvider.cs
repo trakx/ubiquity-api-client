@@ -1,7 +1,6 @@
 ﻿using System.Net.Http.Headers;
-using Microsoft.Extensions.Options;
 using Serilog;
-using Trakx.Utils.Apis;
+using Trakx.Common.ApiClient;
 
 namespace Trakx.Ubiquity.ApiClient.Utils;
 
