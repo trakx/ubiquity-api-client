@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using FluentAssertions;
 using Flurl.Http;
-using Trakx.Utils.Extensions;
+using Trakx.Common.Infrastructure.Environment.Env;
 using Xunit;
 
 namespace Trakx.Ubiquity.ApiClient.Tests.Integration;
@@ -35,7 +35,7 @@ public class SwaggerVersionChecker : IDisposable
 
     private static string GetCurrentOpenApi()
     {
-        var isRootDirectory = DirectoryInfoExtensions.TryWalkBackToRepositoryRoot(null, out var rootDirectory);
+        var isRootDirectory = EnvExtensions.TryWalkBackToRepositoryRoot(null, out var rootDirectory);
         if (!isRootDirectory || rootDirectory == null)
             return "";
 

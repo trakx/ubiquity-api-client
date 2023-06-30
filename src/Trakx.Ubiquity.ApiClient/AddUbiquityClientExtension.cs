@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using Trakx.Utils.DateTimeHelpers;
+using Trakx.Common.DateAndTime;
 using Trakx.Ubiquity.ApiClient.Utils;
 
 namespace Trakx.Ubiquity.ApiClient;

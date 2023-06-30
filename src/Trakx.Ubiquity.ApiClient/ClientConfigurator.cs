@@ -1,7 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
+﻿using Trakx.Common.ApiClient;
 using Trakx.Ubiquity.ApiClient.Utils;
-using Trakx.Utils.Apis;
 
 namespace Trakx.Ubiquity.ApiClient;
 

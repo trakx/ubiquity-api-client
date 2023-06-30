@@ -1,7 +1,6 @@
-using System.Net.Http.Headers;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
-using Trakx.Utils.Testing;
+using Trakx.Common.Testing.Configuration;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -35,7 +34,7 @@ public class UbiquityApiFixture : IDisposable
 
     public UbiquityApiFixture()
     {
-        var configuration = ConfigurationHelper.GetConfigurationFromAws<UbiquityApiConfiguration>("CiCd", true)
+        var configuration = AwsConfigurationHelper.GetConfigurationFromAws<UbiquityApiConfiguration>("CiCd")
             with
             {
                 BaseUrl = "https://ubiquity.api.blockdaemon.com/",
